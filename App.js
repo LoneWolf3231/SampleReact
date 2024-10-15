@@ -1,17 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './Components/Login';
-import TableOfContents from './Components/TableOfContents';
+import { useState } from 'react'
+import './App.css'
+import Captcha  from './Components/Captcha'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/contents" element={<TableOfContents />} />
-      </Routes>
-    </Router>
-  );
+    <Captcha />
+  )
 }
 
-export default App;
+export default App
